@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/users',
-        loader: ()=> fetch('http://localhost:3000/users'),
+        loader: ()=> fetch('https://garden-server-beige.vercel.app/users'),
         hydrateFallbackElement: <h2>Loading</h2>,
         element: <PrivateRoutes><Users></Users></PrivateRoutes>
       }
