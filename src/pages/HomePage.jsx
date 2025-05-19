@@ -1,8 +1,6 @@
-import React, { use } from 'react';
-import { AuthContext } from '../context/AuthContext';
+import React from 'react';
 
 const HomePage = () => {
-    const data = use(AuthContext)
 
     return (
         <div className='mt-24'>

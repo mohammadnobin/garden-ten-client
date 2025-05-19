@@ -6,6 +6,7 @@ import SingIn from "../pages/SingIn";
 import PrivateRoutes from "./PrivateRoutes";
 import About from "../pages/About";
 import Users from "../pages/Users";
+import Loading from "../components/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
       {
         path: '/users',
         loader: ()=> fetch('https://garden-server-beige.vercel.app/users'),
-        hydrateFallbackElement: <h2>Loading</h2>,
+        hydrateFallbackElement: <Loading></Loading>,
         element: <PrivateRoutes><Users></Users></PrivateRoutes>
       }
     ],
