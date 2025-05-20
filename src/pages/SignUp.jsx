@@ -134,9 +134,9 @@ const SignUp = () => {
   };
 
   return (
-    <div className="xl:w-5/12 mx-4 lg:w-7/12 mt-52 md:w-10/12 md:mx-auto bg-red-500 backdrop-blur-[5px] border  border-white/30 rounded-2xl lg:py-[88px] py-8 lg:px-[73px] px-8">
+    <div className="xl:w-5/12 bg-black/20 text-white mx-4 lg:w-7/12 mt-10 md:w-10/12 md:mx-auto  backdrop-blur-[5px] border-2  border-white rounded-2xl lg:py-[88px] py-8 lg:px-[73px] px-8">
       {/* <Helmet><title>SignUp</title></Helmet> */}
-      <h2 className="font-semibold lg:text-4xl pb-[50px] text-2xl border-b border-b-white/30 text-center">
+      <h2 className="font-semibold lg:text-4xl pb-[50px] text-2xl border-b border-b-white text-center">
         Register your account
       </h2>
       <form
@@ -149,33 +149,33 @@ const SignUp = () => {
         <input
           type="text"
           name="name"
-          className="p-5  rounded-md text-base border  border-white/30 focus-within:outline-0 "
+          className="p-5  rounded-md placeholder:text-white placeholder:text-lg text-lg  border-2  border-white focus-within:outline-0 "
           placeholder="Enter your name"
         />
-        <label htmlFor="">Photo URL</label>
+        <label className="font-semibold text-xl" htmlFor="">Photo URL</label>
         <input
           type="text"
           name="photoURL"
-          className="p-5  rounded-md text-base border  border-white/30 focus-within:outline-0 "
+          className="p-5  rounded-md placeholder:text-white placeholder:text-lg text-lg  border-2  border-white focus-within:outline-0 "
           placeholder="Enter your PhotoURL"
         />
-        <label htmlFor="">Email</label>
+        <label className="font-semibold text-xl" htmlFor="">Email</label>
         <input
           type=""
           name="email"
-          className="p-5  rounded-md text-base border  border-white/30 focus-within:outline-0 "
+          className="p-5  rounded-md placeholder:text-white placeholder:text-lg text-lg  border-2  border-white focus-within:outline-0 "
           placeholder="Enter your email address"
         />
-        <label htmlFor="">Password</label>
+        <label className="font-semibold text-xl" htmlFor="">Password</label>
         <input
           type="password"
           name="password"
-          className="p-5  rounded-md text-base border  border-white/30 focus-within:outline-0 "
+          className="p-5 rounded-md placeholder:text-white placeholder:text-lg text-lg  border-2  border-white focus-within:outline-0 "
           placeholder="Enter your password"
         />
         <div className="flex items-center gap-x-2">
           <input type="checkbox" className="w-[25px] h-[20px]" name="" id="" />
-          <label className="font-semibold text-sm">
+          <label className="font-semibold text-xl">
             Accept Term & Conditions
           </label>
         </div>
@@ -185,7 +185,7 @@ const SignUp = () => {
           </p>
         )}
         <button
-          className="cursor-pointer text-base font-semibold py-4 px-4 bg-black/20 rounded-xl border w-full border-white/50"
+          className="cursor-pointer text-xl font-semibold py-4 px-4 bg-black/20 rounded-xl border-2 w-full border-white"
           type="submit"
         >
           Register
@@ -193,12 +193,12 @@ const SignUp = () => {
       </form>
       <button
         onClick={handleGoogleLogin}
-        className="cursor-pointer flex items-center justify-center gap-x-2 mt-4 text-base font-semibold py-3 px-4 bg-black/20 rounded-xl border w-full border-white/50"
+        className="cursor-pointer flex items-center justify-center gap-x-2 mt-4 text-xl font-semibold py-3 px-4 bg-black/20 rounded-xl border-2 w-full border-white"
       >
         <FcGoogle size={32} />
         Google Login
       </button>
-      <p className="text-base mt-5">
+      <p className="text-xl mt-5">
         Already have an account? please{" "}
         <Link to="/signin" className="text-yellow-500 pl-2 underline">
           Login

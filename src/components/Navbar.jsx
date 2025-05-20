@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 import { TbLogout } from "react-icons/tb";
 import { toast } from "react-toastify";
 import { AuthContext } from "../context/AuthContext";
-import logo from '../assets/logo.webp'
+import logo from "../assets/logo.webp";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const { user, signOutUser } = use(AuthContext);
@@ -29,18 +29,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative">
-      <div className="fixed top-14 z-50 container w-[93%] text-black left-1/2 translate-[-50%] backdrop-blur-[5px] bg-white rounded-2xl border border-black px-5">
+    <div className="relative bg-green z-50 py-5">
+      <div className=" container bg-white rounded-full mx-auto text-green backdrop-blur-[5px]  px-5">
         <div className="md:flex justify-between items-center gap-x-6 py-2 hidden ">
-          <div
-            onClick={() => navigate("/")}
-            className="cursor-pointer "
-          >
-            <img
-              className="w-[150px]  rounded-2xl"
-                src={logo}
-              alt="logo"
-            />
+          <div onClick={() => navigate("/")} className="cursor-pointer ">
+            <img className="w-[150px]  rounded-2xl" src={logo} alt="logo" />
           </div>
           <div className="flex items-center gap-x-3.5">
             <NavLink to="/" className="text-base font-semibold">
@@ -56,22 +49,31 @@ const Navbar = () => {
           <div className="flex items-center gap-x-3.5">
             {user ? (
               <>
-                <div className="group relative">
-                  <img
-                    className="size-12 border-2 border-white/30 rounded-full"
-                    src={`${user.photoURL}`}
-                    alt="photoURL"
-                  />
-                  <p className="hidden absolute -top-1 h-[30px] backdrop-blur-[5px] bg-[#2e96d3]/50  rounded-2xl border border-white/30  w-[120px] text-center -left-28 text-xl font-medium group-hover:block">
-                    {user.displayName}
-                  </p>
+                <div className="dropdown dropdown-bottom">
+                  <div tabIndex={0} role="button">
+                    <div className="group relative">
+                      <img
+                        className="size-12 border-2 border-green rounded-full cursor-pointer"
+                        src={`${user.photoURL}`}
+                        alt="photoURL"
+                      />
+                      <p className="hidden absolute -top-1 h-[30px] backdrop-blur-[5px] bg-[#2e96d3]/50  rounded-2xl border border-white/30  w-[120px] text-center -left-28 text-xl font-medium group-hover:block">
+                        {user.displayName}
+                      </p>
+                    </div>
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu bg-green rounded-box z-1 w-35 p-2 shadow-sm"
+                  >
+                    <button
+                      className="cursor-pointer text-base font-semibold flex items-center gap-x-2 py-2 px-4 bg-white rounded-xl border border-white "
+                      onClick={handleLogOut}
+                    >
+                      LogOut <TbLogout />
+                    </button>
+                  </ul>
                 </div>
-                <button
-                  className="cursor-pointer text-base font-semibold flex items-center gap-x-2 py-2 px-4 bg-black/20 rounded-xl border border-white/50 "
-                  onClick={handleLogOut}
-                >
-                  LogOut <TbLogout />
-                </button>
               </>
             ) : (
               <>
@@ -96,7 +98,7 @@ const Navbar = () => {
           <div onClick={() => navigate("/")} className="">
             <img
               className="w-[50px] cursor-pointer rounded-2xl"
-                src={logo}
+              src={logo}
               alt="logo"
             />
           </div>
