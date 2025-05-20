@@ -5,7 +5,8 @@
   themes: light --default;
 }
 @theme{
-  --color-green:#264f21;
+  --color-green:rgba(0,128,0,1);
+  --color-white:white;
 }
 .bg-custom{
     @apply bg-[linear-gradient(rgba(0,128,0,0.6),rgba(0,128,0,0.6)),url('./assets/body.webp')]

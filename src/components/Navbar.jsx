@@ -35,16 +35,26 @@ const Navbar = () => {
           <div onClick={() => navigate("/")} className="cursor-pointer ">
             <img className="w-[150px]  rounded-2xl" src={logo} alt="logo" />
           </div>
-          <div className="flex items-center gap-x-3.5">
+          <div className="flex items-center gap-x-5">
             <NavLink to="/" className="text-base font-semibold">
-              Apps
+              Home
             </NavLink>
             <NavLink to="/about" className="text-base font-semibold">
-              About
+              Explore Gardeners
             </NavLink>
             <NavLink to="/users" className="text-base font-semibold">
-              User
+              Browse Tips
             </NavLink>
+            {user && (
+              <>
+                <NavLink to="/users" className="text-base font-semibold">
+                  Browse Tips
+                </NavLink>
+                <NavLink to="/users" className="text-base font-semibold">
+                  Browse Tips
+                </NavLink>
+              </>
+            )}
           </div>
           <div className="flex items-center gap-x-3.5">
             {user ? (
@@ -79,13 +89,13 @@ const Navbar = () => {
               <>
                 <Link
                   to="/signin"
-                  className="cursor-pointer text-base font-semibold py-2 px-4 bg-black/20 rounded-xl border border-white/50"
+                  className="cursor-pointer text-base font-semibold py-2 px-4 rounded-tl-3xl rounded-br-3xl border-4 border-green bg-white"
                 >
                   Sign In
                 </Link>
                 <Link
                   to="/signup"
-                  className="cursor-pointer text-base font-semibold   py-2 px-4 bg-black/20 rounded-xl border border-white/50"
+                  className="cursor-pointer text-base font-semibold py-2 px-4 rounded-tl-3xl rounded-br-3xl border-4 border-green bg-white"
                 >
                   Sign UP
                 </Link>
@@ -125,23 +135,32 @@ const Navbar = () => {
           )}
           <div className="flex items-center gap-x-3.5">
             {user ? (
-              <>
-                <div className="group relative">
-                  <img
-                    className="size-12 border-2 border-white/30 rounded-full"
-                    src={`${user.photoURL}`}
-                    alt="photoURL"
-                  />
-                  <p className="hidden absolute -top-5 h-[30px] backdrop-blur-[5px] bg-[#2e96d3]/50  rounded-2xl border border-white/30  w-[120px] text-center -left-10 text-xl font-medium group-hover:block">
-                    {user.displayName}
-                  </p>
+                <>
+                <div className="dropdown dropdown-bottom">
+                  <div tabIndex={0} role="button">
+                    <div className="group relative">
+                      <img
+                        className="size-12 border-2 border-green rounded-full cursor-pointer"
+                        src={`${user.photoURL}`}
+                        alt="photoURL"
+                      />
+                      <p className="hidden absolute -top-1 h-[30px] backdrop-blur-[5px] bg-[#2e96d3]/50  rounded-2xl border border-white/30  w-[120px] text-center -left-28 text-xl font-medium group-hover:block">
+                        {user.displayName}
+                      </p>
+                    </div>
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu bg-green rounded-box z-1 w-35 p-2 shadow-sm"
+                  >
+                    <button
+                      className="cursor-pointer text-base font-semibold flex items-center gap-x-2 py-2 px-4 bg-white rounded-xl border border-white "
+                      onClick={handleLogOut}
+                    >
+                      LogOut <TbLogout />
+                    </button>
+                  </ul>
                 </div>
-                <button
-                  className="cursor-pointer text-base font-semibold   py-2 px-4 bg-black/20 rounded-xl border border-white/50"
-                  onClick={handleLogOut}
-                >
-                  LogOut
-                </button>
               </>
             ) : (
               <>

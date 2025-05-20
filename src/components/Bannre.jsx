@@ -78,7 +78,7 @@ const Bannre = () => {
             <h3 className="md:text-3xl text-xl font-medium">
               <span className="font-bold">Date :</span> July 5, 2025
             </h3>
-            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-[20px] md:mt-4 mt-2 ">
+            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
               Reserve Spot
             </button>
           </div>
@@ -95,12 +95,12 @@ const Bannre = () => {
             <h3 className="md:text-3xl text-xl font-medium">
               <span className="font-bold">Date :</span> June 10, 2025
             </h3>
-            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-[20px] md:mt-4 mt-2 ">
+            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
               Join Now
             </button>
           </div>
         </div>
-        <div className="w-full text-center lg:py-52 py-10  bg-[url(bannerbg1.jpg)] bg-no-repeat bg-center bg-cover">
+        <div className="w-full text-center lg:py-52 py-10  bg-[url(/bannerbg1.jpg)] bg-no-repeat bg-center bg-cover">
           <div className=" text-white md:px-0 px-3">
             <h2 className="md:text-6xl text-2xl font-bold">
               Hydroponic DIY Class
@@ -112,7 +112,7 @@ const Bannre = () => {
             <h3 className="md:text-3xl text-xl font-medium">
               <span className="font-bold">Date :</span>August 15, 2025
             </h3>
-            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-[20px] md:mt-4 mt-2 ">
+            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
               Register
             </button>
           </div>
