@@ -5,7 +5,7 @@ import Loading from "../components/Loading";
 import TopTIps from "../components/TopTIps";
 
 
-const profilesPromise = fetch('http://localhost:3000/profile').then(res => res.json())
+const profilesPromise = fetch('http://localhost:3000/profile/active').then(res => res.json())
 const topTipsPromise = fetch('http://localhost:3000/tips/top').then(res => res.json())
 
 const HomePage = () => {

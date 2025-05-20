@@ -8,6 +8,7 @@ import About from "../pages/About";
 import Users from "../pages/Users";
 import Loading from "../components/Loading";
 import TipsPage from "../pages/TipsPage";
+import ExploreGardeners from "../pages/ExploreGardeners";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,12 @@ export const router = createBrowserRouter([
         loader: ()=> fetch('http://localhost:3000/tips'),
         hydrateFallbackElement: <Loading></Loading>,
         element: <PrivateRoutes><TipsPage></TipsPage></PrivateRoutes>
+      },
+      {
+        path: '/explore-gradenars',
+        loader: ()=> fetch('http://localhost:3000/profile'),
+        hydrateFallbackElement: <Loading></Loading>,
+        element: <ExploreGardeners/>
       }
     ],
   },

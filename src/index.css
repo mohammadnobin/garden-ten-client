@@ -15,3 +15,16 @@
 body{
    font-family: "Poppins", sans-serif;
 }
+a.active{
+  text-decoration: underline;
+}
+
+.bgcolor{
+   background: linear-gradient(
+          180deg,
+         white 0,
+          white 50%,
+          rgba(0,128,0,1) 50%,
+          rgba(0,128,0,1) 100%
+        );
+}

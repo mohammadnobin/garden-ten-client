@@ -29,8 +29,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative bg-green z-50 py-5">
-      <div className=" container bg-white rounded-full mx-auto text-green backdrop-blur-[5px]  px-5">
+    <div className="relative bg-green z-50 py-5 px-3 md:px-0">
+      <div className=" lg:container bg-white rounded-full mx-auto text-green backdrop-blur-[5px]  px-5">
         <div className="md:flex justify-between items-center gap-x-6 py-2 hidden ">
           <div onClick={() => navigate("/")} className="cursor-pointer ">
             <img className="w-[150px]  rounded-2xl" src={logo} alt="logo" />
@@ -39,7 +39,7 @@ const Navbar = () => {
             <NavLink to="/" className="text-base font-semibold">
               Home
             </NavLink>
-            <NavLink to="/about" className="text-base font-semibold">
+            <NavLink to="explore-gradenars" className="text-base font-semibold">
               Explore Gardeners
             </NavLink>
             <NavLink to="/users" className="text-base font-semibold">
@@ -48,10 +48,10 @@ const Navbar = () => {
             {user && (
               <>
                 <NavLink to="/users" className="text-base font-semibold">
-                  Browse Tips
+                  Share a Garden Tip
                 </NavLink>
                 <NavLink to="/users" className="text-base font-semibold">
-                  Browse Tips
+                  My Tips
                 </NavLink>
               </>
             )}
@@ -113,29 +113,46 @@ const Navbar = () => {
             />
           </div>
           {show && (
-            <div className="absolute top-20 left-0 space-y-2   w-full rounded-2xl text-center backdrop-blur-[5px] bg-black/50">
+            <div className="absolute top-20 left-0 space-y-2   w-full rounded-2xl text-center backdrop-blur-[5px] bg-white">
               <ul className="space-y-2">
                 <li>
                   <NavLink to="/" className="text-base font-semibold">
-                    Apps
-                  </NavLink>{" "}
-                </li>
-                <li>
-                  <NavLink to="/about" className="text-base font-semibold">
-                    About
+                    Home
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/profile" className="text-base font-semibold">
-                    Profile
+                  <NavLink
+                    to="explore-gradenars"
+                    className="text-base font-semibold"
+                  >
+                    Explore Gardeners
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink to="/users" className="text-base font-semibold">
+                    Browse Tips
+                  </NavLink>
+                </li>
+                {user && (
+                  <>
+                    <li>
+                      <NavLink to="/users" className="text-base font-semibold">
+                        Share a Garden Tip
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/users" className="text-base font-semibold">
+                        My Tips
+                      </NavLink>
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           )}
           <div className="flex items-center gap-x-3.5">
             {user ? (
-                <>
+              <>
                 <div className="dropdown dropdown-bottom">
                   <div tabIndex={0} role="button">
                     <div className="group relative">
