@@ -9,6 +9,8 @@ import Users from "../pages/Users";
 import Loading from "../components/Loading";
 import TipsPage from "../pages/TipsPage";
 import ExploreGardeners from "../pages/ExploreGardeners";
+import ShareTips from "../pages/ShareTips";
+import Myitps from "../pages/Myitps";
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +38,16 @@ export const router = createBrowserRouter([
         loader: ()=> fetch('https://garden-server-beige.vercel.app/users'),
         hydrateFallbackElement: <Loading></Loading>,
         element: <PrivateRoutes><Users></Users></PrivateRoutes>
+      },
+      {
+        path: '/share-tips',
+        element:<PrivateRoutes>
+          <ShareTips />
+        </PrivateRoutes> 
+      },
+      {
+        path: '/my-tips',
+        element: <PrivateRoutes><Myitps /></PrivateRoutes>
       },
       {
         path: '/tips',

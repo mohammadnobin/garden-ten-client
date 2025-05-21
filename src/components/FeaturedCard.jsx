@@ -14,14 +14,14 @@ const FeaturedCard = ({ profile }) => {
       <h2 className="md:pt-3 pt-2 font-bold lg:text-3xl text-2xl text-center">
         {name}
       </h2><div className="flex items-center justify-between">
-        <h4 className="font-medium md:text-xl text-base">{specialty}</h4>
-        <h4 className="font-medium md:text-xl text-base">{experience}</h4>
+        <h4 className="font-medium lg:text-xl text-base">{specialty}</h4>
+        <h4 className="font-medium lg:text-xl text-base">{experience}</h4>
       </div>
       <div className="flex items-center md:py-3 py-2 justify-between">
-        <h4 className="font-bold md:text-xl text-base">
+        <h4 className="font-bold lg:text-xl text-base">
           <span className="font-medium">Status:</span> {status}👍
         </h4>
-        <h4 className="font-bold md:text-xl text-base">
+        <h4 className="font-bold lg:text-xl text-base">
           <span className="font-medium">Location:</span> {location}
         </h4>
       </div>

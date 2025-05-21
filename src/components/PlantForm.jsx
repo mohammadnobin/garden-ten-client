@@ -2,32 +2,35 @@ import React, { use } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 const PlantForm = () => {
-    const {user}= use(AuthContext)
-    const {email, displayName} = user
-    const handleSubmit = (e)=>{
-        e.preventDefault()
-        const form = e.target;
-        const formData = new FormData(form);
-        const newTips = Object.fromEntries(formData.entries())
-        newTips.likeCount = 0;
-        fetch('http://localhost:3000/tips',{
-            method:'POST',
-             headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(newTips)
-        })
-        .then((res)=> res.json())
-        .then((data)=>{
-            if (data.insertedId) {
-                alert('success you can do it')
-            }
-        })
-    }
-
+  const { user } = use(AuthContext);
+   if (!user) return <p>Loading...</p>;
+  const { email, displayName } = user;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const newTips = Object.fromEntries(formData.entries());
+    newTips.likeCount = 0;
+    fetch("http://localhost:3000/tips", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newTips),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          alert("success you can do it");
+        }
+      });
+  };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-6 bg-white shadow rounded-lg space-y-4">
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-xl mx-auto p-6 bg-white shadow rounded-lg space-y-4"
+    >
       <h2 className="text-2xl font-bold mb-4">Submit a Plant Post</h2>
       <div>
         <label className="block font-medium">Title</label>
@@ -113,7 +116,8 @@ const PlantForm = () => {
           <label className="block font-medium">User Name</label>
           <input
             type="text"
-            value={displayName}
+            defaultValue={displayName}
+            readOnly
             name="name"
             className="w-full p-2 border rounded bg-gray-100 cursor-not-allowed"
           />
@@ -122,7 +126,8 @@ const PlantForm = () => {
           <label className="block font-medium">User Email</label>
           <input
             type="email"
-            value={email}
+            defaultValue={email}
+            readOnly
             name="email"
             className="w-full p-2 border rounded bg-gray-100 cursor-not-allowed"
           />

@@ -42,15 +42,15 @@ const Navbar = () => {
             <NavLink to="explore-gradenars" className="text-base font-semibold">
               Explore Gardeners
             </NavLink>
-            <NavLink to="/users" className="text-base font-semibold">
+            <NavLink to="/tips" className="text-base font-semibold">
               Browse Tips
             </NavLink>
             {user && (
               <>
-                <NavLink to="/users" className="text-base font-semibold">
+                <NavLink to="/share-tips" className="text-base font-semibold">
                   Share a Garden Tip
                 </NavLink>
-                <NavLink to="/users" className="text-base font-semibold">
+                <NavLink to="/my-tips" className="text-base font-semibold">
                   My Tips
                 </NavLink>
               </>
