@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 
 const PlantForm = () => {
   const { user } = use(AuthContext);
-   if (!user) return <p>Loading...</p>;
+  if (!user) return <p>Loading...</p>;
   const { email, displayName } = user;
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,7 +11,7 @@ const PlantForm = () => {
     const formData = new FormData(form);
     const newTips = Object.fromEntries(formData.entries());
     newTips.likeCount = 0;
-    fetch("http://localhost:3000/tips", {
+    fetch("https://garden-server-beige.vercel.app/tips", {
       method: "POST",
       headers: {
         "content-type": "application/json",

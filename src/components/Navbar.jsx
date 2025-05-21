@@ -29,8 +29,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative bg-green z-50 py-5 px-3 md:px-0">
-      <div className=" lg:container bg-white rounded-full mx-auto text-green backdrop-blur-[5px]  px-5">
+    <div className="fixed top-0 z-50 left-0 w-full bg-green  py-5 px-3 md:px-0">
+      <div className="lg:container bg-white rounded-full mx-auto text-green backdrop-blur-[5px]  px-5">
         <div className="md:flex justify-between items-center gap-x-6 py-2 hidden ">
           <div onClick={() => navigate("/")} className="cursor-pointer ">
             <img className="w-[150px]  rounded-2xl" src={logo} alt="logo" />

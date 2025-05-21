@@ -7,10 +7,13 @@ const TopTIps = ({topTipsPromise}) => {
       <div className="text-green lg:w-4/12 md:w-8/12 md:w-8/12 mb-4 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
         <h2 className="text-lg font-bold md:text-3xl">Top Trending Tips section</h2>
       </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                  <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {topTips.map(tip=> 
-          <div key={tip._id}>{tip.name}
-          {tip.likeCount}
+          <div className='bg-white text-green p-4' key={tip._id}>
+            Name:{tip.name}
+            <br />
+          total like:{tip.likeCount}
+          <br />
           {tip.title}
           </div>
         )}

@@ -5,7 +5,7 @@
   themes: light --default;
 }
 @theme{
-  --color-green:rgba(0,128,0,1);
+  --color-green:#216d20;
   --color-white:white;
 }
 .bg-custom{

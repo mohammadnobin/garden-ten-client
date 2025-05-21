@@ -11,6 +11,8 @@ import TipsPage from "../pages/TipsPage";
 import ExploreGardeners from "../pages/ExploreGardeners";
 import ShareTips from "../pages/ShareTips";
 import Myitps from "../pages/Myitps";
+import TipsDetails from "../pages/TipsDetails";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -30,37 +32,70 @@ export const router = createBrowserRouter([
         element: <SingIn />,
       },
       {
-        path: '/about',
-        element: <PrivateRoutes><About></About> </PrivateRoutes>
+        path: "/about",
+        element: (
+          <PrivateRoutes>
+            <About></About>{" "}
+          </PrivateRoutes>
+        ),
       },
       {
-        path: '/users',
-        loader: ()=> fetch('https://garden-server-beige.vercel.app/users'),
+        path: "/users",
+        loader: () => fetch("https://garden-server-beige.vercel.app/users"),
         hydrateFallbackElement: <Loading></Loading>,
-        element: <PrivateRoutes><Users></Users></PrivateRoutes>
+        element: (
+          <PrivateRoutes>
+            <Users></Users>
+          </PrivateRoutes>
+        ),
       },
       {
-        path: '/share-tips',
-        element:<PrivateRoutes>
-          <ShareTips />
-        </PrivateRoutes> 
+        path: "/share-tips",
+        element: (
+          <PrivateRoutes>
+            <ShareTips />
+          </PrivateRoutes>
+        ),
       },
       {
-        path: '/my-tips',
-        element: <PrivateRoutes><Myitps /></PrivateRoutes>
+        path: "/my-tips",
+        element: (
+          <PrivateRoutes>
+            <Myitps />
+          </PrivateRoutes>
+        ),
       },
       {
-        path: '/tips',
-        loader: ()=> fetch('http://localhost:3000/tips'),
+        path: "/tips-details/:id",
+        loader: ({ params }) =>
+          fetch(`https://garden-server-beige.vercel.app/tips/${params.id}`),
         hydrateFallbackElement: <Loading></Loading>,
-        element: <PrivateRoutes><TipsPage></TipsPage></PrivateRoutes>
+        element: (
+          <PrivateRoutes>
+            <TipsDetails />
+          </PrivateRoutes>
+        ),
       },
       {
-        path: '/explore-gradenars',
-        loader: ()=> fetch('http://localhost:3000/profile'),
+        path: "/tips",
+        loader: () => fetch("https://garden-server-beige.vercel.app/tips"),
         hydrateFallbackElement: <Loading></Loading>,
-        element: <ExploreGardeners/>
-      }
+        element: (
+          <PrivateRoutes>
+            <TipsPage></TipsPage>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/explore-gradenars",
+        loader: () => fetch("https://garden-server-beige.vercel.app/profile"),
+        hydrateFallbackElement: <Loading></Loading>,
+        element: <ExploreGardeners />,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);

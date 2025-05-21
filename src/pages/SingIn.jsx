@@ -20,7 +20,9 @@ const SignIn = () => {
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const passLowerChar = /^(?=.*[a-z])/;
   const passUpperChar = /^(?=.*[A-Z])/;
-  const passMinMax = /^(?=.{6,})/;
+    const passOneNumber = /^(?=.*[0-9])/;
+  const passOneSpecil = /^(?=.*[!@#$%^&*])/;
+  const passMinMax = /^(?=.{8,})/;
 
   if (!email) {
     setErrormessage("Please enter your email address.");
@@ -32,8 +34,12 @@ const SignIn = () => {
     setErrormessage("Password must include at least one uppercase letter.");
   } else if (!passLowerChar.test(password)) {
     setErrormessage("Password must include at least one lowercase letter.");
+    } else if (!passOneNumber.test(password)) {
+    setErrormessage("Password must include at least one number.");
+  } else if (!passOneSpecil.test(password)) {
+    setErrormessage("Password must include at least one special character.");
   } else if (!passMinMax.test(password)) {
-    setErrormessage("Password must be at least 6 characters long.");
+    setErrormessage("Password must be at least 8 characters long.");
   } else{
     setErrormessage('')
     signInUser(email, password)
@@ -63,35 +69,60 @@ const SignIn = () => {
         });
       });
   };}
-
-  const handleGoogleLogin = () => {
-    signWithGoogle()
-      .then((result) => {
-        navigate(location?.state || "/");
-        toast.success("Google Sign In SuccessFull", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
+    const handleGoogleLogin = () => {
+      signWithGoogle()
+        .then((result) => {
+  
+  
+          const userProfile = {
+            email:result.user?.email,
+              photoURL: result?.user.photoURL,
+              name: result.user?.displayName,
+               creationTime: result.user?.metadata?.creationTime,
+                  lastSignInTime: result.user?.metadata?.lastSignInTime,
+          }
+  
+          fetch("https://garden-server-beige.vercel.app/users", {
+                  method: "POST",
+                  headers: {
+                    "content-type": "application/json",
+                  },
+                  body: JSON.stringify(userProfile),
+                })
+                  .then((res) => res.json())
+                  .then((data)=>{
+                    if (data.insertedId) {
+                      navigate(location?.state || "/");
+                      toast.success("Google Sign In SuccessFull", {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                      });
+                      
+                    }
+                  })
+  
+        })
+        .catch((error) => {
+          toast.error(error.message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         });
-      })
-      .catch((error) => {
-        toast.error(error.message, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      });
-  };
+    };
+  
+  
   const hanldePasswordReset = () => {
     const email = emailRef.current.value;
     forgetPassword(email)

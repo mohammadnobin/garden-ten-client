@@ -5,7 +5,7 @@
 //   const [likes, setLikes] = useState(tip.likeCount || 0);
 
 //   const handleLike = () => {
-//     fetch(`http://localhost:3000/tips/${tip._id}`, {
+//     fetch(`https://garden-server-beige.vercel.app/tips/${tip._id}`, {
 //       method: "PATCH",
 //       headers: {
 //         "content-type": "application/json",
@@ -36,8 +36,6 @@
 
 // export default TipsCard;
 
-
-
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
@@ -49,20 +47,20 @@ const TipsCard = ({ tip }) => {
   );
 
   const handleLike = () => {
-    if (hasLiked) return; // আগেই লাইক করলে ফেরত চলে যাক
+    if (hasLiked) return;
 
-    fetch(`http://localhost:3000/tips/${tip._id}`, {
+    fetch(`https://garden-server-beige.vercel.app/tips/${tip._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ email: user.email }), // শুধু ইমেইল পাঠাও
+      body: JSON.stringify({ email: user.email }),
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
           setLikes(likes + 1);
-          setHasLiked(true); // লাইক হয়ে গেলে disable করো
+          setHasLiked(true);
         } else {
           alert("You already liked this tip.");
           setHasLiked(true);
@@ -71,9 +69,11 @@ const TipsCard = ({ tip }) => {
   };
 
   return (
-    <div className="border p-4 rounded shadow">
+    <div className="border bg-white p-4 rounded shadow">
       <h3 className="text-lg font-bold">{tip.title}</h3>
+      <h3 className="text-lg font-bold">{tip.availability}</h3>
       <p>{tip.description}</p>
+      <p>{tip.email}</p>
       <button
         onClick={handleLike}
         className={`mt-2 px-4 py-1 rounded ${

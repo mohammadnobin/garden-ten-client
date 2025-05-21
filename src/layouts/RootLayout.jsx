@@ -10,7 +10,9 @@ const RootLayout = () => {
   return (
     <div>
       <Navbar />
+      <div className="pt-[104px]">
       {state == "loading" ? <Loading /> : <Outlet />}
+      </div>
       <Footer />
       <ToastContainer />
     </div>

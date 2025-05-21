@@ -6,7 +6,7 @@ function SampleNextArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="absolute top-[50%] translate-y-[-50%] right-[19px] z-50 text-white p-5 bg-[green] rounded-full text-2xl cursor-pointer "
+      className="absolute top-[50%] translate-y-[-50%] right-[19px] z-40 text-green p-5 bg-white rounded-full text-2xl cursor-pointer "
       onClick={onClick}
     >
       <FaLongArrowAltRight />
@@ -18,7 +18,7 @@ function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="absolute top-[50%] translate-y-[-50%] left-[20px] z-50 text-white p-5 cursor-pointer bg-[green] rounded-full text-2xl  "
+      className="absolute top-[50%] translate-y-[-50%] left-[20px] z-40 text-green p-5 cursor-pointer bg-white rounded-full text-2xl  "
       onClick={onClick}
     >
       <FaLongArrowAltLeft />
