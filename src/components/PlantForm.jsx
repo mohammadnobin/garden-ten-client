@@ -88,9 +88,8 @@ const PlantForm = () => {
         <label className="font-semibold text-xl block pb-2">Category</label>
         <select
           name="category"
-          rxeq
-          py-4
-          w-fulluired
+            required
+
           className="px-5 py-4 w-full  rounded-md text-lg placeholder:text-white placeholder:text-lg border-2 border-white focus-within:outline-0 "
         >
           <option className="text-black">Composting</option>

@@ -129,19 +129,19 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/users" className="text-base font-semibold">
+                  <NavLink to="/tips" className="text-base font-semibold">
                     Browse Tips
                   </NavLink>
                 </li>
                 {user && (
                   <>
                     <li>
-                      <NavLink to="/users" className="text-base font-semibold">
+                      <NavLink to="/share-tips" className="text-base font-semibold">
                         Share a Garden Tip
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/users" className="text-base font-semibold">
+                      <NavLink to="/my-tips" className="text-base font-semibold">
                         My Tips
                       </NavLink>
                     </li>

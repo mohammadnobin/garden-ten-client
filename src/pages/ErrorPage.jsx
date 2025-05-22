@@ -1,10 +1,14 @@
 import React from 'react';
-import Card from '../components/Card';
+import { Link } from 'react-router';
 
 const ErrorPage = () => {
     return (
-        <div>
-            <Card />
+        <div className='h-screen text-center'>
+            tis is erro
+            
+            <Link to='/'>
+            Back to Home
+            </Link>
         </div>
     );
 };

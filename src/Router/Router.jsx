@@ -79,7 +79,10 @@ export const router = createBrowserRouter([
       },
       {
         path: "/tips-update/:id",
-        element: <TipsEdit />
+        loader: ({ params }) =>
+          fetch(`https://garden-server-beige.vercel.app/tips/${params.id}`),
+        hydrateFallbackElement: <Loading></Loading>,
+        element: <TipsEdit />,
       },
       {
         path: "/tips",
