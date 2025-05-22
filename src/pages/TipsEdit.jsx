@@ -1,34 +1,16 @@
-import React, { use } from "react";
-import { AuthContext } from "../context/AuthContext";
+import React from "react";
 
-const PlantForm = () => {
-  const { user } = use(AuthContext);
-  if (!user) return <p>Loading...</p>;
-  const { email, displayName } = user;
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const newTips = Object.fromEntries(formData.entries());
-    newTips.likeCount = 0;
-    fetch("https://garden-server-beige.vercel.app/tips", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newTips),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          alert("success you can do it");
-        }
-      });
-  };
-
+const TipsEdit = () => {
   return (
+    <div className="container mx-auto px-4 md:px-0">
+      <div className="text-green mt-10 w-full md:w-8/12 lg:w-5/12 mb-6 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
+        <h2 className="text-xl font-bold md:text-3xl">
+         Update Tip page
+        </h2>
+      </div>
+
     <form
-      onSubmit={handleSubmit}
+    //   onSubmit={handleSubmit}
       className="xl:w-5/12 space-y-2 bg-black/20 text-white  lg:w-7/12  md:w-10/12 md:mx-auto  backdrop-blur-[5px] border-2  border-white rounded-2xl lg:py-8 py-4 lg:px-8 px-4"
     >
       <h2 className="text-2xl font-bold mb-4">Submit a Plant Post</h2>
@@ -117,7 +99,7 @@ const PlantForm = () => {
           <label className="font-semibold text-xl block pb-2">User Name</label>
           <input
             type="text"
-            defaultValue={displayName}
+            // defaultValue={displayName}
             readOnly
             name="name"
             className="px-5 py-4 w-full  rounded-md text-lg placeholder:text-white placeholder:text-lg border-2 border-white focus-within:outline-0  cursor-not-allowed "
@@ -127,7 +109,7 @@ const PlantForm = () => {
           <label className="font-semibold text-xl block pb-2">User Email</label>
           <input
             type="email"
-            defaultValue={email}
+            // defaultValue={email}
             readOnly
             name="email"
             className="px-5 py-4 w-full  rounded-md text-lg placeholder:text-white placeholder:text-lg border-2 border-white focus-within:outline-0  cursor-not-allowed "
@@ -138,10 +120,13 @@ const PlantForm = () => {
         type="submit"
         className="w-full bg-white text-green font-bold text-xl mt-4 cursor-pointer py-2 px-4 rounded"
       >
-        Submit
+        Update
       </button>
     </form>
+
+
+    </div>
   );
 };
 
-export default PlantForm;
+export default TipsEdit;

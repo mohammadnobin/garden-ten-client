@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import Card from './Card';
 
 const TopTIps = ({topTipsPromise}) => {
     const topTips = use(topTipsPromise)
@@ -9,13 +10,14 @@ const TopTIps = ({topTipsPromise}) => {
       </div>
                   <div className="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {topTips.map(tip=> 
-          <div className='bg-white text-green p-4' key={tip._id}>
-            Name:{tip.name}
-            <br />
-          total like:{tip.likeCount}
-          <br />
-          {tip.title}
-          </div>
+          // <div className='bg-white text-green p-4' key={tip._id}>
+          //   Name:{tip.name}
+          //   <br />
+          // total like:{tip.likeCount}
+          // <br />
+          // {tip.title}
+          // </div>
+          <Card key={tip._id} tip={tip} />
         )}
       </div>
         </div>

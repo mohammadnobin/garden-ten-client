@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useNavigation } from "react-router";
+import { Outlet, ScrollRestoration, useNavigation } from "react-router";
 import Navbar from "../components/Navbar";
 import { ToastContainer } from "react-toastify";
 import Loading from "../components/Loading";
@@ -13,6 +13,7 @@ const RootLayout = () => {
       <div className="pt-[104px]">
       {state == "loading" ? <Loading /> : <Outlet />}
       </div>
+ <ScrollRestoration />
       <Footer />
       <ToastContainer />
     </div>

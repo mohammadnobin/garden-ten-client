@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center text-sm mt-8 text-green-700">
+      <div className="text-center text-sm mt-8 ">
         © {new Date().getFullYear()} GardenHub - Spread the love for greenery 🌱
       </div>
     </footer>

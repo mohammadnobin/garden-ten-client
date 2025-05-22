@@ -13,6 +13,7 @@ import ShareTips from "../pages/ShareTips";
 import Myitps from "../pages/Myitps";
 import TipsDetails from "../pages/TipsDetails";
 import ErrorPage from "../pages/ErrorPage";
+import TipsEdit from "../pages/TipsEdit";
 
 export const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ export const router = createBrowserRouter([
             <TipsDetails />
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "/tips-update/:id",
+        element: <TipsEdit />
       },
       {
         path: "/tips",
