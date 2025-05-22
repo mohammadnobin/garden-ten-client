@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -68,8 +69,20 @@ const Bannre = () => {
       <Slider {...settings}>
         <div className="w-full text-center lg:py-52 py-10  bg-[url(/bannerbg3.webp)] bg-no-repeat bg-center bg-cover">
           <div className=" text-white md:px-0 px-3">
-            <h2 className="md:text-6xl text-2xl font-bold">
-              Balcony Gardening Meetup
+            <h2 className="md:text-4xl lg:text-[82px] text-2xl font-bold">
+              <Typewriter
+                cursor
+                cursorBlinking
+                delaySpeed={1000}
+                deleteSpeed={25}
+                loop={0}
+                typeSpeed={75}
+                words={[
+                  "Balcony Gardening Meetup",
+                  "Hydroponic DIY Class",
+                  "Community Compost Workshop",
+                ]}
+              />
             </h2>
             <h3 className="md:text-3xl text-xl md:py-4 py-2 font-medium">
               <span className="font-bold">Location :</span> Botanical Garden,
@@ -85,8 +98,20 @@ const Bannre = () => {
         </div>
         <div className="w-full text-center lg:py-52 py-10  bg-[url(/bannerbg2.webp)] bg-no-repeat bg-center bg-cover">
           <div className="   text-white md:px-0 px-3">
-            <h2 className="md:text-6xl text-2xl font-bold">
-              Community Compost Workshop
+            <h2 className="md:text-4xl lg:text-[82px] text-2xl font-bold">
+              <Typewriter
+                cursor
+                cursorBlinking
+                delaySpeed={1000}
+                deleteSpeed={25}
+                loop={0}
+                typeSpeed={75}
+                words={[
+                  "Community Compost Workshop",
+                  "Balcony Gardening Meetup",
+                  "Hydroponic DIY Class",
+                ]}
+              />
             </h2>
             <h3 className="md:text-3xl text-xl md:py-4 py-2 font-medium">
               <span className="font-bold">Location :</span> Botanical Garden,
@@ -102,8 +127,20 @@ const Bannre = () => {
         </div>
         <div className="w-full text-center lg:py-52 py-10  bg-[url(/bannerbg1.jpg)] bg-no-repeat bg-center bg-cover">
           <div className=" text-white md:px-0 px-3">
-            <h2 className="md:text-6xl text-2xl font-bold">
-              Hydroponic DIY Class
+            <h2 className="md:text-4xl lg:text-[82px] text-2xl font-bold">
+              <Typewriter
+                cursor
+                cursorBlinking
+                delaySpeed={1000}
+                deleteSpeed={25}
+                loop={0}
+                typeSpeed={75}
+                words={[
+                  "Hydroponic DIY Class",
+                  "Community Compost Workshop",
+                  "Balcony Gardening Meetup",
+                ]}
+              />
             </h2>
             <h3 className="md:text-3xl text-xl md:py-4 py-2 font-medium">
               <span className="font-bold">Location :</span> GreenTech Lab,
