@@ -33,7 +33,7 @@ const Bannre = () => {
     arrows: true,
     speed: 500,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -91,7 +91,7 @@ const Bannre = () => {
             <h3 className="md:text-3xl text-xl font-medium">
               <span className="font-bold">Date :</span> July 5, 2025
             </h3>
-            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
+            <button className="dark:bg-black dark:text-white dark:border-white bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
               Reserve Spot
             </button>
           </div>
@@ -120,7 +120,7 @@ const Bannre = () => {
             <h3 className="md:text-3xl text-xl font-medium">
               <span className="font-bold">Date :</span> June 10, 2025
             </h3>
-            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
+            <button className="dark:bg-black dark:text-white dark:border-white bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
               Join Now
             </button>
           </div>
@@ -149,7 +149,7 @@ const Bannre = () => {
             <h3 className="md:text-3xl text-xl font-medium">
               <span className="font-bold">Date :</span>August 15, 2025
             </h3>
-            <button className="bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
+            <button className="dark:bg-black dark:text-white dark:border-white bg-white cursor-pointer text-green py-3 px-10 md:text-3xl text-xl font-bold rounded-tl-full rounded-br-full border-4 border-green bg-white md:mt-4 mt-2 ">
               Register
             </button>
           </div>

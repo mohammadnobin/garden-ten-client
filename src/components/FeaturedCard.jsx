@@ -39,10 +39,10 @@ const FeaturedCard = ({ profile }) => {
   const { name, age, experiences, gender, status, totalSharedTips, image } = profile;
 
   return (
-    <div className="bg-white p-5 rounded-lg border-green border-6 border-double text-green shadow-lg">
+    <div className="bg-white dark:bg-black dark:text-white dark:border-white p-5 rounded-lg border-green border-6 border-double text-green shadow-lg">
       <div className="bgcolor border-2 rounded-xl border-green py-5">
         <img
-          className="md:size-[200px] size-[150px] mx-auto rounded-full object-cover"
+          className="md:size-[200px]  size-[150px] mx-auto rounded-full object-cover"
           src={image}
           alt={name}
         />

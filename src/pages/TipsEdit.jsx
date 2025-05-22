@@ -46,15 +46,15 @@ const TipsEdit = () => {
   return (
     <div className="container mx-auto px-4 md:px-0">
             <Link to='/my-tips'>
-      <button className="text-green mt-2 md:mt-6 flex items-center md:ml-0 mx-auto md:mb-0 mb-2  gap-x-2 py-4 px-8 rounded-tl-full rounded-br-full border-4 border-green bg-white text-xl cursor-pointer"><FaArrowLeft size={20} /> Go Back</button>
+      <button className="text-green dark:bg-black dark:text-white dark:border-white mt-2 md:mt-6 flex items-center md:ml-0 mx-auto md:mb-0 mb-2  gap-x-2 py-4 px-8 rounded-tl-full rounded-br-full border-4 border-green bg-white text-xl cursor-pointer"><FaArrowLeft size={20} /> Go Back</button>
       </Link>
-      <div className="text-green mt-10 w-full md:w-8/12 lg:w-5/12 mb-6 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
+      <div className="text-green dark:bg-black dark:text-white dark:border-white mt-10 w-full md:w-8/12 lg:w-5/12 mb-6 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
         <h2 className="text-xl font-bold md:text-3xl">Update Tip page</h2>
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="xl:w-5/12 space-y-2 bg-black/20 text-white  lg:w-7/12  md:w-10/12 md:mx-auto  backdrop-blur-[5px] border-2  border-white rounded-2xl lg:py-8 py-4 lg:px-8 px-4"
+        className="xl:w-5/12 dark:bg-black dark:text-white dark:border-white space-y-2 bg-black/20 text-white  lg:w-7/12  md:w-10/12 md:mx-auto  backdrop-blur-[5px] border-2  border-white rounded-2xl lg:py-8 py-4 lg:px-8 px-4"
       >
         <h2 className="text-2xl font-bold mb-4">Submit a Plant Post</h2>
 
@@ -172,7 +172,7 @@ const TipsEdit = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-white text-green font-bold text-xl mt-4 cursor-pointer py-2 px-4 rounded"
+          className="w-full dark:bg-black dark:text-white dark:border-white border-2 bg-white text-green font-bold text-xl mt-4 cursor-pointer py-2 px-4 rounded"
         >
           Update
         </button>

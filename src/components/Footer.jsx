@@ -5,11 +5,11 @@ import { useNavigate } from "react-router";
 const Footer = () => {
       const navigate = useNavigate();
   return (
-    <footer className="bg-green text-white py-10 px-4 mt-12">
+    <footer className="bg-green dark:bg-black  text-white py-10 px-4 mt-12">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
         {/* Contact Info */}
         <div>
-          <div onClick={() => navigate("/")} className="cursor-pointer bg-white w-[150px] mb-4 mx-auto ">
+          <div onClick={() => navigate("/")} className="cursor-pointer bg-white w-[150px] mb-4 md:ml-0 mx-auto ">
             <img className="w-[150px]  rounded-2xl" src={logo} alt="logo" />
           </div>
           <h3 className="text-xl font-bold mb-2">Contact Info</h3>

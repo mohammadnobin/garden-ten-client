@@ -3,13 +3,13 @@ import React from "react";
 const GardenIntroSection = () => {
   return (
     <section className="px-4 md:px-0">
-      <div className="text-green lg:w-6/12 md:px-0 px-6 md:w-8/12 mb-4 md:mb-8 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
+      <div className="text-green dark:bg-black dark:text-white dark:border-white lg:w-6/12 md:px-0 px-6 md:w-8/12 mb-4 md:mb-8 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
         <h2 className="text-lg font-bold md:text-3xl">
           Create the garden you’ve always wanted
         </h2>
       </div>
       <div className="grid gap-8 text-green md:grid-cols-3 text-center">
-        <div className="flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
+        <div className="dark:bg-black dark:text-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
           <div className="bg-green-100 rounded-full p-4 mb-4">
             <svg
               width="40"
@@ -32,7 +32,7 @@ const GardenIntroSection = () => {
           <p className="text-sm ">Find your perfect garden</p>
         </div>
 
-        <div className="flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
+        <div className="dark:bg-black dark:text-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
           <div className="bg-green-100 rounded-full p-4 mb-4">
             <svg
               width="40"
@@ -55,7 +55,7 @@ const GardenIntroSection = () => {
           <p className="text-sm ">Ideas for seasons and regions</p>
         </div>
 
-        <div className="flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
+        <div className="dark:bg-black dark:text-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
           <div className="bg-green-100 rounded-full p-4 mb-4">
             <svg
               width="40"

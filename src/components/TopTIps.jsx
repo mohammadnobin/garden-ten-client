@@ -13,7 +13,7 @@ const TopTIps = () => {
 
   return (
     <div className="px-3 md:px-0 py-10 text-white">
-      <div className="text-green lg:w-4/12 md:w-8/12 md:w-8/12 mb-4 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
+      <div className="text-green dark:bg-black dark:text-white dark:border-white lg:w-4/12 md:w-8/12 md:w-8/12 mb-4 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
         <h2 className="text-lg font-bold md:text-3xl">
           Top Trending Tips section
         </h2>
