@@ -9,9 +9,6 @@ import GardenIntroSection from "../components/GardenIntroSection";
 const profilesPromise = fetch(
   "https://garden-server-beige.vercel.app/active-profile"
 ).then((res) => res.json());
-const topTipsPromise = fetch(
-  "https://garden-server-beige.vercel.app/top-tips"
-).then((res) => res.json());
 
 const HomePage = () => {
   return (
@@ -22,7 +19,7 @@ const HomePage = () => {
           <FeaturedGardeners profilesPromise={profilesPromise} />
         </Suspense>
         <Suspense fallback={<Loading></Loading>}>
-          <TopTIps topTipsPromise={topTipsPromise} />
+          <TopTIps />
         </Suspense>
         <LatestPost />
         <GardenIntroSection />

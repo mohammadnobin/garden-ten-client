@@ -3,6 +3,7 @@ import FeaturedCard from "./FeaturedCard";
 
 const FeaturedGardeners = ({profilesPromise}) => {
   const profiles = use(profilesPromise)
+  
 
 
   return (
