@@ -2,7 +2,7 @@ import React, { use, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../context/AuthContext";
-import { toast } from "react-toastify";
+import Swal from 'sweetalert2'
 
 const SignUp = () => {
   const { signUpUser, signWithGoogle, updateUser, setReload } =
@@ -69,43 +69,30 @@ const SignUp = () => {
                 .then((res) => res.json())
                 .then((data) => {
                   if (data.insertedId) {
-                    toast.success("Sign In SuccessFull", {
-                      position: "top-right",
-                      autoClose: 5000,
-                      hideProgressBar: false,
-                      closeOnClick: false,
-                      pauseOnHover: true,
-                      draggable: true,
-                      progress: undefined,
-                      theme: "light",
-                    });
+                    Swal.fire({
+  title: "Sign In SuccessFull",
+  text: "You clicked the button!",
+  icon: "success"
+});
                   }
                 });
             })
             .catch((error) => {
-              toast.error(error.message, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-              });
+              Swal.fire({
+  icon: 'error',
+  title: "Oops...",
+  text: ((error.message)),
+  footer: '<a href="#">Why do I have this issue?</a>'
+});
             });
         })
         .catch((error) => {
-          toast.error(error.message, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
+          Swal.fire({
+  icon: 'error',
+  title: "Oops...",
+  text: ((error.message)),
+  footer: '<a href="#">Why do I have this issue?</a>'
+});
         });
     }
   };
@@ -134,32 +121,23 @@ const SignUp = () => {
                 .then((data)=>{
                   if (data.insertedId) {
                     navigate(location?.state || "/");
-                    toast.success("Google Sign In SuccessFull", {
-                      position: "top-right",
-                      autoClose: 5000,
-                      hideProgressBar: false,
-                      closeOnClick: false,
-                      pauseOnHover: true,
-                      draggable: true,
-                      progress: undefined,
-                      theme: "light",
-                    });
+                    Swal.fire({
+  title: "Google Sign In SuccessFull",
+  text: "You clicked the button!",
+  icon: "success"
+});
                     
                   }
                 })
 
       })
       .catch((error) => {
-        toast.error(error.message, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        Swal.fire({
+  icon: 'error',
+  title: "Oops...",
+  text: ((error.message)),
+  footer: '<a href="#">Why do I have this issue?</a>'
+});
       });
   };
 

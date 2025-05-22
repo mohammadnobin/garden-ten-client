@@ -1,5 +1,6 @@
 import React, { use } from "react";
 import { AuthContext } from "../context/AuthContext";
+import Swal from "sweetalert2";
 
 const PlantForm = () => {
   const { user } = use(AuthContext);
@@ -21,7 +22,11 @@ const PlantForm = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("success you can do it");
+          Swal.fire({
+            title: "success you can do it",
+            text: "You clicked the button!",
+            icon: "success",
+          });
         }
       });
   };
@@ -88,8 +93,7 @@ const PlantForm = () => {
         <label className="font-semibold text-xl block pb-2">Category</label>
         <select
           name="category"
-            required
-
+          required
           className="px-5 py-4 w-full  rounded-md text-lg placeholder:text-white placeholder:text-lg border-2 border-white focus-within:outline-0 "
         >
           <option className="text-black">Composting</option>

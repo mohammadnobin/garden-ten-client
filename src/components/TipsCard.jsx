@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
+import Swal from "sweetalert2";
 
 const TipsCard = ({ tip }) => {
   const { user } = useContext(AuthContext);
@@ -23,8 +24,17 @@ const TipsCard = ({ tip }) => {
         if (data.modifiedCount > 0) {
           setLikes((prev) => prev + 1);
           setHasLiked(true);
+          Swal.fire({
+            title: "wow You Like this Tips",
+            text: "You clicked the button!",
+            icon: "success",
+          });
         } else {
-          alert("You already liked this tip.");
+          Swal.fire({
+            title: "You already liked this tip",
+            text: "You clicked the button!",
+            icon: "success",
+          });
           setHasLiked(true);
         }
       });

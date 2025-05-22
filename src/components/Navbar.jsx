@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { TbLogout } from "react-icons/tb";
-import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 import { AuthContext } from "../context/AuthContext";
 import logo from "../assets/logo.webp";
 const Navbar = () => {
@@ -14,15 +14,10 @@ const Navbar = () => {
   const handleLogOut = () => {
     signOutUser()
       .then((result) => {
-        toast.success("LogOut SuccessFull", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
+        Swal.fire({
+          title: "LogOut SuccessFull",
+          text: "You clicked the button!",
+          icon: "success",
         });
       })
       .catch((error) => {});
@@ -67,7 +62,7 @@ const Navbar = () => {
                         src={`${user.photoURL}`}
                         alt="photoURL"
                       />
-                      <p className="hidden absolute -top-1 h-[30px] backdrop-blur-[5px] bg-[#2e96d3]/50  rounded-2xl border border-white/30  w-[120px] text-center -left-28 text-xl font-medium group-hover:block">
+                      <p className="hidden absolute -top-2  backdrop-blur-[5px] bg-[#2e96d3]/50  rounded-2xl border border-white/30  w-[200px] text-center right-12 text-xl font-medium group-hover:block">
                         {user.displayName}
                       </p>
                     </div>
@@ -136,12 +131,18 @@ const Navbar = () => {
                 {user && (
                   <>
                     <li>
-                      <NavLink to="/share-tips" className="text-base font-semibold">
+                      <NavLink
+                        to="/share-tips"
+                        className="text-base font-semibold"
+                      >
                         Share a Garden Tip
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/my-tips" className="text-base font-semibold">
+                      <NavLink
+                        to="/my-tips"
+                        className="text-base font-semibold"
+                      >
                         My Tips
                       </NavLink>
                     </li>
