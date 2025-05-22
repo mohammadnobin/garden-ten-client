@@ -1,5 +1,6 @@
 import React from "react";
-import { useLoaderData } from "react-router";
+import { FaArrowLeft } from "react-icons/fa";
+import { Link, useLoaderData } from "react-router";
 import Swal from "sweetalert2";
 
 const TipsEdit = () => {
@@ -44,6 +45,9 @@ const TipsEdit = () => {
 
   return (
     <div className="container mx-auto px-4 md:px-0">
+            <Link to='/my-tips'>
+      <button className="text-green mt-2 md:mt-6 flex items-center md:ml-0 mx-auto md:mb-0 mb-2  gap-x-2 py-4 px-8 rounded-tl-full rounded-br-full border-4 border-green bg-white text-xl cursor-pointer"><FaArrowLeft size={20} /> Go Back</button>
+      </Link>
       <div className="text-green mt-10 w-full md:w-8/12 lg:w-5/12 mb-6 mx-auto text-center py-4 rounded-tl-full rounded-br-full border-4 border-green bg-white">
         <h2 className="text-xl font-bold md:text-3xl">Update Tip page</h2>
       </div>

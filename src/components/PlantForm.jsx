@@ -27,6 +27,7 @@ const PlantForm = () => {
             text: "You clicked the button!",
             icon: "success",
           });
+          form.reset();
         }
       });
   };

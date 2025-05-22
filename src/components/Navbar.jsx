@@ -30,8 +30,8 @@ const Navbar = () => {
           <div onClick={() => navigate("/")} className="cursor-pointer ">
             <img className="w-[150px]  rounded-2xl" src={logo} alt="logo" />
           </div>
-          <div className="flex items-center gap-x-5">
-            <NavLink to="/" className="text-base font-semibold">
+          <div  className="flex items-center gap-x-5">
+            <NavLink  to="/" className="text-base font-semibold">
               Home
             </NavLink>
             <NavLink to="explore-gradenars" className="text-base font-semibold">
@@ -108,14 +108,14 @@ const Navbar = () => {
             />
           </div>
           {show && (
-            <div className="absolute top-20 left-0 space-y-2   w-full rounded-2xl text-center backdrop-blur-[5px] bg-white">
+            <div  className="absolute top-20 left-0 space-y-2   w-full rounded-2xl text-center backdrop-blur-[5px] bg-white">
               <ul className="space-y-2">
-                <li>
+                <li onClick={()=>setShow(false)}>
                   <NavLink to="/" className="text-base font-semibold">
                     Home
                   </NavLink>
                 </li>
-                <li>
+                <li onClick={()=>setShow(false)}>
                   <NavLink
                     to="explore-gradenars"
                     className="text-base font-semibold"
@@ -123,14 +123,14 @@ const Navbar = () => {
                     Explore Gardeners
                   </NavLink>
                 </li>
-                <li>
+                <li onClick={()=>setShow(false)}>
                   <NavLink to="/tips" className="text-base font-semibold">
                     Browse Tips
                   </NavLink>
                 </li>
                 {user && (
                   <>
-                    <li>
+                    <li onClick={()=>setShow(false)}>
                       <NavLink
                         to="/share-tips"
                         className="text-base font-semibold"
@@ -138,7 +138,7 @@ const Navbar = () => {
                         Share a Garden Tip
                       </NavLink>
                     </li>
-                    <li>
+                    <li onClick={()=>setShow(false)}>
                       <NavLink
                         to="/my-tips"
                         className="text-base font-semibold"
