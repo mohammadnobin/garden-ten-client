@@ -61,8 +61,8 @@ const FeaturedCard = ({ profile }) => {
       </div>
 
       <div className="flex flex-col sm:flex-row items-center justify-between md:py-3 py-2 gap-2">
-        <h4 className="font-bold lg:text-xl text-base">
-          <span className="font-medium">Status:</span> {status} 👍
+        <h4 className="font-bold capitalize lg:text-xl text-base">
+          <span className="font-medium ">Status:</span> {status} 🟢
         </h4>
         <h4 className="font-bold lg:text-xl text-base">
           <span className="font-medium">Total Tips:</span> {totalSharedTips}
