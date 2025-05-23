@@ -89,9 +89,8 @@ export const router = createBrowserRouter([
         loader: () => fetch("https://garden-server-beige.vercel.app/tips"),
         hydrateFallbackElement: <Loading></Loading>,
         element: (
-          <PrivateRoutes>
             <TipsPage></TipsPage>
-          </PrivateRoutes>
+
         ),
       },
       {

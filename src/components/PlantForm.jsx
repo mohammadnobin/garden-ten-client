@@ -44,7 +44,7 @@ const PlantForm = () => {
         type="text"
         name="title"
         className="px-5 py-4 w-full  rounded-md text-lg placeholder:text-white placeholder:text-lg border-2 border-white focus-within:outline-0 "
-        placeholder="How I Grow Tomatoes Indoors"
+        placeholder="Inter your title"
         required
       />
 
@@ -86,7 +86,7 @@ const PlantForm = () => {
           name="imageUrl"
           required
           className="px-5 py-4 w-full  rounded-md text-lg placeholder:text-white placeholder:text-lg border-2 border-white focus-within:outline-0 "
-          placeholder="https://example.com/image.jpg"
+          placeholder="Photo URL"
         />
       </div>
 

@@ -8,20 +8,21 @@
 @theme {
   --color-green: #216d20;
   --color-white: white;
+  --color-black: rgb(60, 60, 60);
 }
-/* .bg-custom {
-  @apply bg-[linear-gradient(rgba(0,128,0,0.6),rgba(0,128,0,0.6)),url('./assets/body.webp')] dark:bg-black;
-} */
-
 .bg-custom {
+  @apply bg-[linear-gradient(rgba(0,128,0,0.6),rgba(0,128,0,0.6)),url('./assets/body.webp')] dark:bg-black;
+}
+
+/* .bg-custom {
   background-image: linear-gradient(rgba(0,128,0,0.6), rgba(0,128,0,0.6)), url('./assets/body.webp');
   background-size: cover;
   background-position: center;
-}
+} */
 
 .dark .bg-custom {
   background-image: none;
-  background-color: black;
+  background-color: rgb(60, 60, 60);
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -44,8 +45,8 @@ a.active {
 .dark .bgcolor {
   background: linear-gradient(
     180deg,
-    black 0,
-    black 50%,
+    rgb(60, 60, 60) 0,
+    rgb(60, 60, 60) 50%,
     #2e4f4f 50%,
     #2e4f4f 100%
   );
