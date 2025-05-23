@@ -14,12 +14,6 @@
   @apply bg-[linear-gradient(rgba(0,128,0,0.6),rgba(0,128,0,0.6)),url('./assets/body.webp')] dark:bg-black;
 }
 
-/* .bg-custom {
-  background-image: linear-gradient(rgba(0,128,0,0.6), rgba(0,128,0,0.6)), url('./assets/body.webp');
-  background-size: cover;
-  background-position: center;
-} */
-
 .dark .bg-custom {
   background-image: none;
   background-color: rgb(60, 60, 60);
@@ -28,7 +22,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 a.active {
-  text-decoration: underline;
+  @apply  border-y-2
 }
 
 .bgcolor {
