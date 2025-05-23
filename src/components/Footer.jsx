@@ -64,7 +64,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+          <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
           <div className="flex justify-center md:justify-normal space-x-4">
             <a
               href="https://facebook.com"
@@ -101,7 +101,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-500">
+      <div className="border-t border-gray-700 dark:border-white mt-10 pt-4 text-center text-sm ">
         © {new Date().getFullYear()} GardenHub - Spread the love for greenery 🌱
       </div>
     </footer>
