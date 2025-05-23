@@ -9,7 +9,7 @@ const GardenIntroSection = () => {
         </h2>
       </div>
       <div className="grid gap-8 text-green md:grid-cols-3 text-center">
-        <div className="dark:bg-black dark:text-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
+        <div className="dark:bg-black dark:text-white dark:border-2 dark:border-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
           <div className="bg-green-100 rounded-full p-4 mb-4">
             <svg
               width="40"
@@ -32,7 +32,7 @@ const GardenIntroSection = () => {
           <p className="text-sm ">Find your perfect garden</p>
         </div>
 
-        <div className="dark:bg-black dark:text-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
+        <div className="dark:bg-black dark:text-white dark:border-2 dark:border-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
           <div className="bg-green-100 rounded-full p-4 mb-4">
             <svg
               width="40"
@@ -55,7 +55,7 @@ const GardenIntroSection = () => {
           <p className="text-sm ">Ideas for seasons and regions</p>
         </div>
 
-        <div className="dark:bg-black dark:text-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
+        <div className="dark:bg-black dark:text-white dark:border-2 dark:border-white flex flex-col items-center bg-white p-4 rounded-2xl gap-y-3">
           <div className="bg-green-100 rounded-full p-4 mb-4">
             <svg
               width="40"

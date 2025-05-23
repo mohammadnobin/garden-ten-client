@@ -11,7 +11,7 @@ const LatestPost = () => {
         <h2 className="text-lg font-bold md:text-3xl">Latest Posts</h2>
       </div> 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2">
-        <div className="bg-white dark:bg-black dark:text-white rounded-xl p-5 md:p-7 text-green">
+        <div className="bg-white dark:bg-black dark:text-white  dark:border-2 dark:border-white rounded-xl p-5 md:p-7 text-green">
             <figure>
                 <img className='w-full rounded-2xl' src={latest1} alt="" />
             </figure>
@@ -21,7 +21,7 @@ const LatestPost = () => {
                 <p className='text-base md:text-lg'>Roses make good partners to a host of plants, but those with an aggressive spread, extensive roots <span className='font-bold cursor-pointer'>..see more</span> </p>
             </div>
         </div>
-        <div className="bg-white dark:bg-black dark:text-white rounded-xl p-5 md:p-7 text-green">
+        <div className="bg-white dark:bg-black dark:text-white  dark:border-2 dark:border-white rounded-xl p-5 md:p-7 text-green">
             <figure>
                 <img className='w-full rounded-2xl' src={latest2} alt="" />
             </figure>
@@ -31,7 +31,7 @@ const LatestPost = () => {
                 <p className='text-base md:text-lg'>Roses make good partners to a host of plants, but those with an aggressive spread, extensive roots <span className='font-bold cursor-pointer'>..see more</span></p>
             </div>
         </div>
-        <div className="bg-white dark:bg-black dark:text-white rounded-xl p-5 md:p-7 text-green">
+        <div className="bg-white dark:bg-black dark:text-white  dark:border-2 dark:border-white rounded-xl p-5 md:p-7 text-green">
             <figure>
                 <img className='w-full rounded-2xl' src={latest3} alt="" />
             </figure>
@@ -41,7 +41,7 @@ const LatestPost = () => {
                 <p className='text-base md:text-lg'>If you live in the Midwest and are building your pollinator selections, your options are numerous. <span className='font-bold cursor-pointer'>..see more</span></p>
             </div>
         </div>
-        <div className="bg-white dark:bg-black dark:text-white rounded-xl p-5 md:p-7 text-green">
+        <div className="bg-white dark:bg-black dark:text-white  dark:border-2 dark:border-white rounded-xl p-5 md:p-7 text-green">
             <figure>
                 <img className='w-full rounded-2xl' src={latest4} alt="" />
             </figure>

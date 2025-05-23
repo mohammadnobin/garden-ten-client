@@ -68,7 +68,7 @@ const TipsPage = () => {
         </select>
       </div>
       <div className="bg-white dark:bg-black dark:text-white dark:border-white w-full lg:w-10/12 mx-auto  text-green border-4 border-double border-green rounded-xl p-4">
-        <div className="hidden md:grid grid-cols-4 gap-4 pb-2 border-b-2 border-green font-bold text-lg">
+        <div className="hidden md:grid grid-cols-4 gap-4 pb-2 border-b-2 dark:border-white border-green font-bold text-lg">
           <div>Image</div>
           <div>Title</div>
           <div>Category</div>

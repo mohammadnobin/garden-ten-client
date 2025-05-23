@@ -1,11 +1,15 @@
 import React, { use, useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router";
 import { FaBars } from "react-icons/fa";
-import { MdClose } from "react-icons/md";
+import { MdClose, MdOutlineWbSunny } from "react-icons/md";
 import { TbLogout } from "react-icons/tb";
 import Swal from "sweetalert2";
 import { AuthContext } from "../context/AuthContext";
 import logo from "../assets/logo.webp";
+import { MdDarkMode } from "react-icons/md";
+
+
+
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== "undefined") {
@@ -120,10 +124,10 @@ const Navbar = () => {
               </>
             )}
             <button
-              className="text-center py-2 dark:border-white border cursor-pointer border-black px-4 bg-white text-black dark:text-white dark:bg-black "
+              className="text-black dark:text-white cursor-pointer "
               onClick={toggleDarkMode}
             >
-              {darkMode ? "light" : "dark"}
+              {darkMode ? <MdOutlineWbSunny size={30} /> : <MdDarkMode size={30} />}
             </button>
           </div>
         </div>
@@ -226,10 +230,10 @@ const Navbar = () => {
               </>
             )}
             <button
-              className="text-center py-2 dark:border-white border cursor-pointer border-black px-4 bg-white text-black dark:text-white dark:bg-black "
+              className=" text-black dark:text-white cursor-pointer  "
               onClick={toggleDarkMode}
             >
-              {darkMode ? "light" : "dark"}
+           {darkMode ? <MdOutlineWbSunny size={30} /> : <MdDarkMode size={30} />}
             </button>
           </div>
           <div onClick={() => setShow(!show)}>
