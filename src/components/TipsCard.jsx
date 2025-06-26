@@ -1,13 +1,18 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import Swal from "sweetalert2";
+import { useParams } from "react-router";
 
 const TipsCard = ({ tip }) => {
   const { user } = useContext(AuthContext);
+  const {id} = useParams()
   const [likes, setLikes] = useState(tip.likeCount || 0);
   const [hasLiked, setHasLiked] = useState(
     tip.likedUsers?.includes(user.email) || false
   );
+  if (id !== tip._id) {
+    return <p className="py-10 font-bold text-8xl text-center">no Product match </p>
+  }
 
   const handleLike = () => {
     if (hasLiked) return;
