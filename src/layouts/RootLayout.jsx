@@ -10,9 +10,9 @@ const RootLayout = () => {
     <div>
       <Navbar />
       <div className="pt-[104px]">
-      {state == "loading" ? <Loading /> : <Outlet />}
+        {state == "loading" ? <Loading /> : <Outlet />}
       </div>
- <ScrollRestoration />
+      <ScrollRestoration />
       <Footer />
     </div>
   );

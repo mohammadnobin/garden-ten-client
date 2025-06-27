@@ -14,6 +14,7 @@ import Myitps from "../pages/Myitps";
 import TipsDetails from "../pages/TipsDetails";
 import ErrorPage from "../pages/ErrorPage";
 import TipsEdit from "../pages/TipsEdit";
+import Dashboard from "../pages/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -100,6 +101,31 @@ export const router = createBrowserRouter([
         element: <ExploreGardeners />,
       },
     ],
+  },
+  {
+    path: '/dashboard',
+    element:<PrivateRoutes><Dashboard /></PrivateRoutes> ,
+    children: [
+      {
+        path: 'all-items',
+        element: <PrivateRoutes><TipsPage /></PrivateRoutes> ,
+         loader: () => fetch("https://garden-server-beige.vercel.app/tips"),
+        hydrateFallbackElement: <Loading></Loading>,
+      },
+      {
+        path: 'add-item',
+        element:<PrivateRoutes><ShareTips /></PrivateRoutes> 
+
+      },
+      {
+        path: 'my-item',
+        element: (
+          <PrivateRoutes>
+            <Myitps />
+          </PrivateRoutes>
+        ),
+      }
+    ]
   },
   {
     path: "*",

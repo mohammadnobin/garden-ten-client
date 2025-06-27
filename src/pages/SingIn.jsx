@@ -122,7 +122,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="xl:w-5/12 bg-black/20 text-white mx-4 lg:w-7/12 mt-10 md:w-10/12 md:mx-auto  backdrop-blur-[5px] border-2  border-white rounded-2xl lg:py-[88px] py-8 lg:px-[73px] px-8">
+    <div className="xl:w-5/12 bg-green text-white mx-4 lg:w-7/12 mt-10 md:w-10/12 md:mx-auto  backdrop-blur-[5px] border-2  border-white rounded-2xl lg:py-[88px] py-8 lg:px-[73px] px-8">
       <Helmet>
         <title>SignIn</title>
       </Helmet>

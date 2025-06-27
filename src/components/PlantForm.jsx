@@ -35,7 +35,7 @@ const PlantForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="xl:w-5/12 dark:bg-black dark:text-white dark:border-white space-y-2 bg-black/20 text-white  lg:w-7/12  md:w-10/12 md:mx-auto  backdrop-blur-[5px] border-2  border-white rounded-2xl lg:py-8 py-4 lg:px-8 px-4"
+      className="xl:w-5/12 dark:bg-black dark:text-white dark:border-white space-y-2 bg-green text-white  lg:w-7/12  md:w-10/12 md:mx-auto  backdrop-blur-[5px] border-2  border-white rounded-2xl lg:py-8 py-4 lg:px-8 px-4"
     >
       <h2 className="text-2xl font-bold mb-4">Submit a Plant Post</h2>
 

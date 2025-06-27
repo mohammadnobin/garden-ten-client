@@ -75,6 +75,9 @@ const Navbar = () => {
                 <NavLink to="/my-tips" className="text-base font-semibold">
                   My Tips
                 </NavLink>
+                <NavLink to="/dashboard" className="text-base font-semibold">
+                  Dashboard
+                </NavLink>
               </>
             )}
           </div>
