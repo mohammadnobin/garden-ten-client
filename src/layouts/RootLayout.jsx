@@ -12,6 +12,7 @@ const RootLayout = () => {
       <div className="pt-[104px]">
         {state == "loading" ? <Loading /> : <Outlet />}
       </div>
+      {/* its for only page reload from top  */}
       <ScrollRestoration />
       <Footer />
     </div>
