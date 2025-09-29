@@ -1,4 +1,3 @@
-// this is the context provider for authentication using Firebase in a React application.
 import React, { useEffect, useState } from "react";
 
 import {
